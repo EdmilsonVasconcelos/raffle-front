@@ -1,0 +1,56 @@
+@import "../../styles/colors.scss";
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 50px;
+  align-items: center;
+  border-bottom: 4px solid $primary-green;
+
+  .content-left {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-center {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+
+    .links {
+      font-family: "Arial";
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 20px;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $purple;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .content-right {
+    width: 20%;
+
+    a {
+      &:hover {
+        svg {
+          background-color: $second-purple;
+          padding: 5px;
+          transition: 0.1s;
+          border-radius: 3px;
+
+          path {
+            stroke: $white;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

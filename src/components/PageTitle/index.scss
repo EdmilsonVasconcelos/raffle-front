@@ -1,0 +1,23 @@
+@import "../../styles/colors.scss";
+
+.page-title {
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 32px;
+  padding: 10px;
+
+  background: linear-gradient(
+    180deg,
+    $second-white 71.61%,
+    rgba(216, 215, 215, 0.187539) 137.5%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0px 4px 4px rgba(250, 240, 240, 0.21);
+
+  text-align: center;
+}
