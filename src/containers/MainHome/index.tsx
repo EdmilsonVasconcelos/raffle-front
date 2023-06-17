@@ -8,7 +8,7 @@ const MainHome: React.FC = () => {
   return (
     <div className="body-home">
       <PageTitle title="Você pode ser mais um vencedor!" />;
-      <PageSubTitle text="Conheça nossas premiações" img="/images/rocket.svg" />
+      <PageSubTitle text="Conheça nossas premiações" img="images/rocket.svg" />
       <div className="content-home">
         <div className="content-home-cards">
           <div className="content-home-card">

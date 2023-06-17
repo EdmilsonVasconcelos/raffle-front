@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = (props) => {
   return (
     <div className="card">
       <div className="card-img">
-        <img src="/images/tracker.png" alt="Imagem do produto do leilão" />
+        <img src="images/tracker.png" alt="Imagem do produto do leilão" />
       </div>
       <div className="card-content">
         <h2 className="title-card-content">Tracker</h2>

@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="logo">
-        <img src="/images/logo.svg" alt="Imagem da logo" />
+        <img src="images/logo.svg" alt="Imagem da logo" />
       </div>
 
       <span className="text">

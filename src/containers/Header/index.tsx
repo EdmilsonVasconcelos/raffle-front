@@ -6,7 +6,7 @@ const Header: React.FC = () => {
       <div className="content">
         <div className="content-left">
           <a href="#">
-            <img src="/images/logo.svg" alt="Logo baby sorteios" />
+            <img src="images/logo.svg" alt="Logo baby sorteios" />
           </a>
         </div>
 
