@@ -1,21 +1,24 @@
 import "./index.scss";
 
 interface CardProps {
-  text?: string;
-  img?: string;
+  title: string;
+  img: string;
+  price: number;
+  status: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
   return (
     <div className="card">
       <div className="card-img">
-        <img src="images/tracker.png" alt="Imagem do produto do leilão" />
+        <img src={props.img} alt="Imagem do produto do leilão" />
       </div>
 
       <div className="card-content">
-        <h2 className="title-card-content">Tracker</h2>
-        <span className="text-card-content">R$ 0,00</span>
-        <button className="card-btn-success">Adicionar ao carrinho</button>
+        <h2 className="title-card-content">{props.title}</h2>
+        <span className="text-card-content">{`R$: ${props.price}`}</span>
+        <span className="text-card-content">{`Status: ${props.status}`}</span>
+        <button className="card-btn-success">Comprar</button>
       </div>
     </div>
   );

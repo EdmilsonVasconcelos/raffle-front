@@ -36,6 +36,8 @@
 
   .content-right {
     width: 20%;
+    display: flex;
+    justify-content: center;
 
     a {
       &:hover {
