@@ -34,14 +34,11 @@ const MainHome: React.FC = () => {
         </div>
       </div>
       <div className="img-hexagonal">
-        <img
-          src="../../images/hexagonal.png"
-          alt="Imagem de um hexagonal verde "
-        />
+        <img src="images/hexagonal.png" alt="Imagem de um hexagonal verde " />
       </div>
       <div className="social-media">
         <img
-          src="/images/insta-icon.svg"
+          src="images/insta-icon.svg"
           alt="Imagem de um ícone do instagram"
         />
         <span className="text">@babysorteios</span>
