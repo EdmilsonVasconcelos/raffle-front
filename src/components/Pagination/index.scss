@@ -1,0 +1,28 @@
+@import "../../styles/colors.scss";
+
+.pagination-container {
+  button {
+    margin: 0 10px;
+    background: initial;
+    border: initial;
+    color: initial;
+    cursor: pointer;
+    color: $white;
+    font-size: 20px;
+    font-weight: bold;
+
+    &.active {
+      color: $green;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      color: #888888;
+    }
+  }
+}

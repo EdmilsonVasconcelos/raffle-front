@@ -1,4 +1,4 @@
-import React from "react";
+import "./index.scss";
 
 interface PaginationProps {
   totalItems: number;
@@ -111,11 +111,19 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <div className="pagination-container">
-      <button onClick={handlePrevPage} disabled={currentPage === 1}>
+      <button
+        onClick={handlePrevPage}
+        className="arrow"
+        disabled={currentPage === 1}
+      >
         &lt;
       </button>
       {renderPaginationLinks()}
-      <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+      <button
+        onClick={handleNextPage}
+        className="arrow"
+        disabled={currentPage === totalPages}
+      >
         &gt;
       </button>
     </div>

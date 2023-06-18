@@ -81,12 +81,14 @@ const MainHome: React.FC = () => {
         <span className="text">@babysorteios</span>
       </div>
 
-      <Pagination
-        totalItems={paginatedRaffles?.totalElements || 0}
-        itemsPerPage={6}
-        currentPage={currentPage}
-        onPageChange={handlePageChange}
-      />
+      <div className="pagination">
+        <Pagination
+          totalItems={paginatedRaffles?.totalElements || 0}
+          itemsPerPage={6}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 };
