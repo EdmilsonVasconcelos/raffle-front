@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/raffle-front/static/css/main.4b263c9c.css",
+    "main.css": "/raffle-front/static/css/main.cd9d0a00.css",
     "main.js": "/raffle-front/static/js/main.a1d925bb.js",
     "static/js/787.3b61fa34.chunk.js": "/raffle-front/static/js/787.3b61fa34.chunk.js",
     "static/media/roboto-latin-400-normal.woff2": "/raffle-front/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
@@ -18,12 +18,12 @@
     "static/media/roboto-greek-ext-400-normal.woff2": "/raffle-front/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "static/media/roboto-greek-ext-400-normal.woff": "/raffle-front/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "index.html": "/raffle-front/index.html",
-    "main.4b263c9c.css.map": "/raffle-front/static/css/main.4b263c9c.css.map",
+    "main.cd9d0a00.css.map": "/raffle-front/static/css/main.cd9d0a00.css.map",
     "main.a1d925bb.js.map": "/raffle-front/static/js/main.a1d925bb.js.map",
     "787.3b61fa34.chunk.js.map": "/raffle-front/static/js/787.3b61fa34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b263c9c.css",
+    "static/css/main.cd9d0a00.css",
     "static/js/main.a1d925bb.js"
   ]
 }
