@@ -1,4 +1,4 @@
-# Front-end do projeto de pedidos
+# Front-end do projeto de Rifas
 
 ### Tecnologias
 
