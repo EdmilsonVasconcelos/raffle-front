@@ -21,7 +21,6 @@ const Header: React.FC = () => {
             Termos de uso
           </a>
         </div>
-
         <div className="content-right">
           <a href="#">
             <svg
