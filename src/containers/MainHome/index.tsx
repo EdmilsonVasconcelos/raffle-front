@@ -47,14 +47,13 @@ const MainHome: React.FC = () => {
   };
 
   const handlePageChange = (page: number): void => {
-    console.log("Estou sendo chamado" + page);
     setCurrentPage(page);
   };
 
   return (
     <div className="body-home">
       <PageTitle title="Você pode ser mais um vencedor!" />
-      <PageSubTitle text="Conheça nossas premiações" img="images/rocket.svg" />
+      <PageSubTitle text="Conheça nossas premiações" img="/images/rocket.svg" />
       <div className="content-home">
         <div className="content-home-cards">
           {paginatedRaffles?.raffles?.map((raffle) => {
@@ -76,7 +75,7 @@ const MainHome: React.FC = () => {
       </div> */}
       <div className="social-media">
         <img
-          src="images/insta-icon.svg"
+          src={process.env.PUBLIC_URL + "/images/insta-icon.svg"}
           alt="Imagem de um ícone do instagram"
         />
         <span className="text">@babysorteios</span>
@@ -84,7 +83,7 @@ const MainHome: React.FC = () => {
 
       <Pagination
         totalItems={paginatedRaffles?.totalElements || 0}
-        itemsPerPage={2}
+        itemsPerPage={6}
         currentPage={currentPage}
         onPageChange={handlePageChange}
       />

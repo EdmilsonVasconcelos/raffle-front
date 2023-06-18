@@ -8,7 +8,7 @@ interface PageSubTitleProps {
 const PageSubTitle: React.FC<PageSubTitleProps> = (props) => {
   return (
     <div className="container-subtitle">
-      <img src={props.img} alt="Imagem do subtitle" />
+      <img src={process.env.PUBLIC_URL + props.img} alt="Imagem do subtitle" />
       <h2 className="subtitle">{props.text}</h2>
     </div>
   );
