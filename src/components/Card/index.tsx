@@ -8,8 +8,6 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-  const newa = "newaa";
-
   return (
     <div className="card">
       <div className="card-img">
