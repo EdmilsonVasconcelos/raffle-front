@@ -15,6 +15,8 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
+  const newa = "new";
+
   const renderPaginationLinks = () => {
     const links = [];
 
