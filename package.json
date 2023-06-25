@@ -41,11 +41,15 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run test -- --findRelatedTests",
-      "npm run lint:fix",
-      "git add"
+    "*.{js,jsx,ts,tsx}": [
+      "yarn test --bail --findRelatedTests",
+      "yarn lint"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
