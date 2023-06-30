@@ -36,4 +36,4 @@ jobs:
         run: yarn build
 
       - name: Deploying 🚀🚀🚀🚀
-        run: gh-pages -d build
+        run: yarn gh-pages -d build
