@@ -29,5 +29,7 @@ jobs:
       - name: Building
         run: yarn predeploy
 
-      - name: Deploy
-        run: yarn deploy
+      - name: Deploy 🚀
+        uses: EdmilsonVasconcelos/github-pages-deploy-action@v4
+        with:
+          folder: build
