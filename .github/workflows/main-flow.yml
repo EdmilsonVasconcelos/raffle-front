@@ -29,6 +29,11 @@ jobs:
       - name: Testing
         run: yarn test
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "edmilson.vasconcelos89@gmail.com"
+          git config --global user.name "EdmilsonVasconcelos"
+
       - name: Installing github pages
         run: yarn add gh-pages --dev
 
