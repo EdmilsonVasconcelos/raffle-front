@@ -21,16 +21,16 @@ jobs:
         with:
           node-version: 16
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "edmilson.vasconcelos89@gmail.com"
+          git config --global user.name "EdmilsonVasconcelos"
+
       - name: Install dependencies
         run: yarn install
 
       - name: Testing
         run: yarn test
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "edmilson.vasconcelos89@gmail.com"
-          git config --global user.name "EdmilsonVasconcelos"
 
       - name: Installing github pages
         run: yarn add gh-pages --dev
@@ -38,9 +38,5 @@ jobs:
       - name: Building
         run: yarn build
 
-      - name: Deploying 🚀
-        run: |
-          git config --global user.email "edmilson.vasconcelos89@gmail.com"
-          git config --global user.name "EdmilsonVasconcelos"
-          yarn add gh-pages --dev
-          yarn gh-pages -d build
+      - name: Deploying 🚀🚀🚀🚀
+        run: yarn gh-pages -d build
