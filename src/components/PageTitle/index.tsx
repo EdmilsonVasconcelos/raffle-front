@@ -7,7 +7,6 @@ interface PageTitleProps {
 const PageTitle: React.FC<PageTitleProps> = (props) => {
   return (
     <>
-      <h1 className="page-title">TESTINGGGGG</h1>
       <h1 className="page-title">{props.title}</h1>
     </>
   );

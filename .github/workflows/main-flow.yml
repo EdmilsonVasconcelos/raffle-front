@@ -29,8 +29,11 @@ jobs:
       - name: Testing
         run: yarn test
 
+      - name: Installing github pages
+        run: yarn add gh-pages --dev
+
       - name: Building
         run: yarn build
 
-      - name: Deploy 🚀🚀🚀🚀
+      - name: Deploying 🚀🚀🚀🚀
         run: gh-pages -d build
