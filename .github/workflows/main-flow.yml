@@ -33,7 +33,9 @@ jobs:
         run: yarn predeploy
 
       - name: Deploy 🚀
-        uses: EdmilsonVasconcelos/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: build
+          repositorty-name: EdmilsonVasconcelos/raffle-front
+          target-folder: public
