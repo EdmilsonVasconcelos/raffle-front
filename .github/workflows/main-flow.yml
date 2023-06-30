@@ -26,16 +26,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Test
+      - name: Testing
         run: yarn test
 
       - name: Building
-        run: yarn predeploy
+        run: yarn build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
-          repositorty-name: EdmilsonVasconcelos/raffle-front
-          target-folder: public
+      - name: Deploy 🚀🚀🚀🚀
+        run: gh-pages -d build
