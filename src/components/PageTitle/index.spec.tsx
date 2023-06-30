@@ -11,6 +11,6 @@ describe("PageTitle", () => {
     const pageTitleText = screen.getByTestId("page-title");
 
     expect(screen.getByText(props.title)).toBeInTheDocument();
-    expect(pageTitleText.textContent).toBe("auhauha");
+    expect(pageTitleText.textContent).toBe("Page Title");
   });
 });
