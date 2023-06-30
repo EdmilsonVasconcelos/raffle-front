@@ -33,6 +33,7 @@ jobs:
         run: yarn predeploy
 
       - name: Deploy 🚀
-        uses: EdmilsonVasconcelos/raffle-front/github-pages-deploy-action@v4
+        uses: EdmilsonVasconcelos/github-pages-deploy-action@v4
         with:
+          branch: gh-pages
           folder: build
