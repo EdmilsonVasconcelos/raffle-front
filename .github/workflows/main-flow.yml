@@ -21,11 +21,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Configure Git
-        run: |
-          git config --global user.email "edmilson.vasconcelos89@gmail.com"
-          git config --global user.name "EdmilsonVasconcelos"
-
       - name: Install dependencies
         run: yarn install
 
@@ -38,5 +33,9 @@ jobs:
       - name: Building
         run: yarn build
 
-      - name: Deploying 🚀🚀🚀🚀
-        run: yarn gh-pages -d build
+      - name: Deploying 🚀
+        run: |
+          git config --global user.name EdmilsonVasconcelos
+          git config --global user.email edmilson.vasconcelos89@gmail.com
+          git remote set-url origin https://${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}@github.com/EdmilsonVasconcelos/raffle-front
+          yarn deploy
