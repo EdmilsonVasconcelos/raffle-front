@@ -1,9 +1,4 @@
-import {
-  render,
-  fireEvent,
-  screen,
-  getAllByDisplayValue,
-} from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import Pagination from ".";
 
 describe("Pagination", () => {
@@ -44,6 +39,24 @@ describe("Pagination", () => {
 
     expect(mockOnPageChange).toHaveBeenCalledTimes(1);
     expect(mockOnPageChange).toHaveBeenCalledWith(2);
+  });
+
+  test("calls onPageChange with next page number when next button is clicked", () => {
+    const props = {
+      totalItems: 100,
+      itemsPerPage: 10,
+      currentPage: 3,
+      onPageChange: mockOnPageChange,
+    };
+
+    render(<Pagination {...props} />);
+
+    const nextButton = screen.getByText(">");
+
+    fireEvent.click(nextButton);
+
+    expect(mockOnPageChange).toHaveBeenCalledTimes(1);
+    expect(mockOnPageChange).toHaveBeenCalledWith(4);
   });
 
   test("calls onPageChange with next page number when next button is clicked", () => {
