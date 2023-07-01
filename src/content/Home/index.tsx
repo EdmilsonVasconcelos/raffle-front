@@ -9,8 +9,9 @@ import axios, { AxiosResponse } from "axios";
 import { BASE_URL } from "../../utils/api";
 import Pagination from "../../components/Pagination";
 import Main from "../../containers/Main";
+import { Link } from "react-router-dom";
 
-const ContentHome: React.FC = () => {
+const Home: React.FC = () => {
   const [paginatedRaffles, setPaginatedRaffles] =
     useState<PaginatedListRaffle>();
 
@@ -64,12 +65,14 @@ const ContentHome: React.FC = () => {
             {paginatedRaffles?.raffles?.map((raffle) => {
               return (
                 <div className="content-home-card" key={raffle.id}>
-                  <Card
-                    title={raffle.productName}
-                    price={raffle.price}
-                    img={raffle.savedImages[0]}
-                    status={translateRaffleStatus(raffle.raffleStatus)}
-                  />
+                  <Link to={`/details-product/${raffle.id}`}>
+                    <Card
+                      title={raffle.productName}
+                      price={raffle.price}
+                      img={raffle.savedImages[0]}
+                      status={translateRaffleStatus(raffle.raffleStatus)}
+                    />
+                  </Link>
                 </div>
               );
             })}
@@ -96,4 +99,4 @@ const ContentHome: React.FC = () => {
   );
 };
 
-export default ContentHome;
+export default Home;
