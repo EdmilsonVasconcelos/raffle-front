@@ -8,8 +8,9 @@ import "./index.scss";
 import axios, { AxiosResponse } from "axios";
 import { BASE_URL } from "../../utils/api";
 import Pagination from "../../components/Pagination";
+import Main from "../../containers/Main";
 
-const MainHome: React.FC = () => {
+const ContentHome: React.FC = () => {
   const [paginatedRaffles, setPaginatedRaffles] =
     useState<PaginatedListRaffle>();
 
@@ -51,46 +52,48 @@ const MainHome: React.FC = () => {
   };
 
   return (
-    <div className="body-home">
-      <PageTitle title="Você pode ser mais um vencedor!" />
-      <PageSubTitle text="Conheça nossas premiações" img="/images/rocket.svg" />
-      <div className="content-home">
-        <div className="content-home-cards">
-          {paginatedRaffles?.raffles?.map((raffle) => {
-            return (
-              <div className="content-home-card" key={raffle.id}>
-                <Card
-                  title={raffle.productName}
-                  price={raffle.price}
-                  img={raffle.savedImages[0]}
-                  status={translateRaffleStatus(raffle.raffleStatus)}
-                />
-              </div>
-            );
-          })}
+    <Main>
+      <div className="body-home">
+        <PageTitle title="Você pode ser mais um vencedor!" />
+        <PageSubTitle
+          text="Conheça nossas premiações"
+          img="/images/rocket.svg"
+        />
+        <div className="content-home">
+          <div className="content-home-cards">
+            {paginatedRaffles?.raffles?.map((raffle) => {
+              return (
+                <div className="content-home-card" key={raffle.id}>
+                  <Card
+                    title={raffle.productName}
+                    price={raffle.price}
+                    img={raffle.savedImages[0]}
+                    status={translateRaffleStatus(raffle.raffleStatus)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="social-media">
+          <img
+            src={process.env.PUBLIC_URL + "/images/insta-icon.svg"}
+            alt="Imagem de um ícone do instagram"
+          />
+          <span className="text">@babysorteios</span>
+        </div>
+
+        <div className="pagination">
+          <Pagination
+            totalItems={paginatedRaffles?.totalElements || 0}
+            itemsPerPage={6}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
-      {/* <div className="img-hexagonal">
-        <img src="images/hexagonal.png" alt="Imagem de um hexagonal verde " />
-      </div> */}
-      <div className="social-media">
-        <img
-          src={process.env.PUBLIC_URL + "/images/insta-icon.svg"}
-          alt="Imagem de um ícone do instagram"
-        />
-        <span className="text">@babysorteios</span>
-      </div>
-
-      <div className="pagination">
-        <Pagination
-          totalItems={paginatedRaffles?.totalElements || 0}
-          itemsPerPage={6}
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
-        />
-      </div>
-    </div>
+    </Main>
   );
 };
 
-export default MainHome;
+export default ContentHome;

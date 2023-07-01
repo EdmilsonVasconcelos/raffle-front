@@ -1,13 +1,9 @@
-import MainHome from "../../containers/MainHome";
-import Header from "../../containers/Header";
-import Footer from "../../containers/Footer";
+import ContentHome from "../../content/ContentHome";
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <MainHome />
-      <Footer />
+      <ContentHome />
     </>
   );
 };
