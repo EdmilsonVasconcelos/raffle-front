@@ -9,6 +9,11 @@
   border-radius: 18px;
   height: 200px;
 
+  @media screen and(max-width: 800px) {
+    width: 100%;
+    height: auto;
+  }
+
   .card-img {
     width: 35%;
     height: auto;
@@ -35,12 +40,20 @@
     font-family: "Roboto";
     font-size: 25px;
     margin: 0;
+
+    @media screen and(max-width: 800px) {
+      font-size: 20px;
+    }
   }
 
   .text-card-content {
     font-family: "Roboto";
     font-size: 20px;
     margin-top: 15px;
+
+    @media screen and(max-width: 800px) {
+      font-size: 18px;
+    }
   }
 
   .card-btn-success {

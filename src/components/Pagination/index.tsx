@@ -110,7 +110,7 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className="pagination-container">
+    <div className="pagination-container" data-testid="pagination-container">
       <button
         onClick={handlePrevPage}
         className="arrow"
@@ -123,6 +123,7 @@ const Pagination: React.FC<PaginationProps> = ({
         onClick={handleNextPage}
         className="arrow"
         disabled={currentPage === totalPages}
+        data-testid="last-button-pagination"
       >
         &gt;
       </button>
