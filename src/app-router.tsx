@@ -4,14 +4,12 @@ import DetailsProduct from "./content/DetailsProduct";
 
 const AppRouter: React.FC = () => {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<PageHome />} />
-          <Route path="/details-product/:id" element={<DetailsProduct />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/*" element={<PageHome />} />
+        <Route path="/details-product/:id" element={<DetailsProduct />} />
+      </Routes>
+    </Router>
   );
 };
 
