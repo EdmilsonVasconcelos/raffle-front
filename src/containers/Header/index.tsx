@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.scss";
 
 const Header: React.FC = () => {
@@ -5,12 +6,12 @@ const Header: React.FC = () => {
     <>
       <div className="content">
         <div className="content-left">
-          <a href="#">
+          <Link to="/">
             <img
               src={process.env.PUBLIC_URL + "/images/logo.svg"}
               alt="Logo baby sorteios"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="content-center">
