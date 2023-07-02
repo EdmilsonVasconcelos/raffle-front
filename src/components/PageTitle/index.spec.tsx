@@ -8,6 +8,7 @@ describe("PageTitle", () => {
 
   it("renders the card component with correct props", () => {
     render(<PageTitle {...props} />);
+
     const pageTitleText = screen.getByTestId("page-title");
 
     expect(screen.getByText(props.title)).toBeInTheDocument();
