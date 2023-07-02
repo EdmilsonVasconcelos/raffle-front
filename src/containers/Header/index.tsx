@@ -3,8 +3,8 @@ import "./index.scss";
 
 const Header: React.FC = () => {
   return (
-    <div className="content">
-      <div className="content-left">
+    <div className="content-header">
+      <div className="content-header-left">
         <Link to="/">
           <img
             src={process.env.PUBLIC_URL + "/images/logo.svg"}
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         </Link>
       </div>
 
-      <div className="content-center">
+      <div className="content-header-center">
         <a href="#" className="links">
           Como participar
         </a>
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           Termos de uso
         </a>
       </div>
-      <div className="content-right">
+      <div className="content-header-right">
         <a href="#">
           <svg
             width="30"
