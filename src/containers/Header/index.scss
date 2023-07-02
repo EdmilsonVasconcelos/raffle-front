@@ -3,14 +3,19 @@
 .content {
   display: flex;
   flex-direction: row;
-  padding: 30px 50px;
+  padding: 10px 50px;
   align-items: center;
+  height: 100px;
   border-bottom: 4px solid $primary-green;
 
   .content-left {
     width: 20%;
     display: flex;
     flex-direction: row;
+  }
+
+  .content-left img{
+    width: 100%;
   }
 
   .content-center {

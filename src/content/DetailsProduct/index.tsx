@@ -4,6 +4,7 @@ import axios, { AxiosResponse } from "axios";
 import { BASE_URL } from "../../utils/api";
 import { Raffle } from "../../interfaces/raffle";
 import { useEffect, useState } from "react";
+import "./index.scss";
 
 const DetailsProduct = () => {
   const { id } = useParams();
